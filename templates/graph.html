@@ -1,0 +1,27 @@
+<!-- templates/graph.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ device_name }} - Temperature and Humidity Graph</title>
+    <!-- Include necessary CSS and JavaScript libraries -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>{{ device_name }} - Temperature and Humidity Graph</h1>
+
+    <div id="temperature-plot"></div>
+    <div id="humidity-plot"></div>
+
+    <script>
+        // Plot temperature data
+        var temperatureData = {{ temperature_data|safe }};
+        var temperatureLayout = {title: 'Temperature vs Time'};
+        Plotly.newPlot('temperature-plot', [temperatureData], temperatureLayout);
+
+        // Plot humidity data
+        var humidityData = {{ humidity_data|safe }};
+        var humidityLayout = {title: 'Humidity vs Time'};
+        Plotly.newPlot('humidity-plot', [humidityData], humidityLayout);
+    </script>
+</body>
+</html>

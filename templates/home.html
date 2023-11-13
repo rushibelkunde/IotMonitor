@@ -1,0 +1,39 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Documentation</title>
+</head>
+<body>
+    <h1>API Documentation</h1>
+
+    <h2>Create Device</h2>
+    <p>
+        <strong>Endpoint:</strong> <code>/api/devices/</code><br>
+        <strong>Method:</strong> POST<br>
+        <strong>Description:</strong> Create a new device.
+    </p>
+
+    <h2>Get Device</h2>
+    <p>
+        <strong>Endpoint:</strong> <code>/api/devices/&lt;str:uid&gt;/</code><br>
+        <strong>Method:</strong> GET<br>
+        <strong>Description:</strong> Retrieve information about a specific device.
+    </p>
+
+    <h2>Reading View</h2>
+    <p>
+        <strong>Endpoint:</strong> <code>/api/devices/&lt;str:uid&gt;/readings/&lt;str:parameter&gt;/</code><br>
+        <strong>Method:</strong> GET<br>
+        <strong>Description:</strong> Get readings (temperature or humidity) for a specific device in a given period.
+    </p>
+
+    <h2>Device Graph View</h2>
+    <p>
+        <strong>Endpoint:</strong> <code>/devices-graph/&lt;str:uid&gt;/</code><br>
+        <strong>Method:</strong> GET<br>
+        <strong>Description:</strong> View a graph of temperature and humidity vs time for a specific device.
+    </p>
+
+</body>
+</html>
